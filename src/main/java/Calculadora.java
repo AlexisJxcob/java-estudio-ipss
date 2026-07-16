@@ -1,5 +1,10 @@
 public class Calculadora{
 
+    public Calculadora(int a, int b) { // constructor
+        this.A = a;
+        this.B = b;
+    }
+
     int A, B;
 
     public void setA(int a){
@@ -22,12 +27,22 @@ public class Calculadora{
         int suma = A + B;
         System.out.println("La suma es: " + suma);
     }
-    public void sumar(){
+    public void sumar(){ // funciones distintas esta recibe parametros
         int suma = this.A + this.B;
         System.out.println("La suma es: " + suma);
     }
     public int resta(int A, int B) {
         int resto = A - B;
         return resto;
+    }
+
+    public int division(int A, int B) {
+        int div = A / B;
+        return div;
+    }
+
+    public int producto(int A, int B) {
+        int pro = A * B;
+        return pro;
     }
 }
