@@ -12,7 +12,7 @@ public class Calculadora{
     }
 
     public void setB(int b){
-        this.B = b;
+        this.B = b; // el constructor se encargar de guardar los datos del set
     }
 
     public int getA () {
@@ -36,9 +36,12 @@ public class Calculadora{
         return resto;
     }
 
-    public int division(int A, int B) {
-        int div = A / B;
-        return div;
+    public float division(float A, float B) {
+        if (B == 0) {
+            System.out.println("Error no se puede imprimir por cero");
+            return 0; // evitamos que el programa caiga
+        }
+        return A / B;
     }
 
     public int producto(int A, int B) {
