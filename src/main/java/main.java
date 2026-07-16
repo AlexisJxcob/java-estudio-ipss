@@ -9,8 +9,5 @@ public class main {
 
         menuApp.iniciar();
 
-        System.out.println("La informacion obtenida por getA es: " + miCalc.getA());
-        System.out.println("La informacion obtenida por getB es: " + miCalc.getB());
-
     }
 }

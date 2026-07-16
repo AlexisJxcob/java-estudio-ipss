@@ -35,7 +35,7 @@ public class Calculadora {
         System.out.println("La suma (desde atributos internos) es: " + suma);
     }
 
-    // Sobrecarga 2: Ahora SÍ retorna un entero para que coincida con tu menú
+    // Sobrecarga 2: Ahora SÍ retorna un entero para que coincida con el menú
     public int sumar(int A, int B) {
         return A + B;
     }
@@ -48,10 +48,10 @@ public class Calculadora {
         return A * B;
     }
 
-    // División optimizada: maneja decimales y evita que el programa muera si dividen por cero
+    // evita que el programa muera si dividen por cero
     public float division(float A, float B) {
         if (B == 0) {
-            System.out.println("¡Error matemático: No se puede dividir por cero!");
+            System.out.println("¡Error matemático: No se puede dividir por cero.");
             return 0.0f; // Retorna cero seguro
         }
         return A / B; // Retorna el valor decimal correcto (ej. 2.5)
