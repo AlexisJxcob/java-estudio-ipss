@@ -4,28 +4,10 @@ public class main {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
 
-        System.out.println("Ingrese un número:");
-        int n1 = leer.nextInt();
+        Calculadora miCalc = new Calculadora(0, 0); // se usa el operador new para instanciar (crear) un objeto real en la memoria de la computadora llamado miCalc.
+        menu menuApp = new menu(miCalc);
 
-        System.out.println("Ingrese otro número:");
-        int n2 = leer.nextInt();
-
-        Calculadora miCalc = new Calculadora(n1, n2); // se usa el operador new para instanciar (crear) un objeto real en la memoria de la computadora llamado miCalc.
-
-        miCalc.setA(n1);
-        miCalc.setB(n2);
-
-        miCalc.sumar();
-        miCalc.sumar(n1, n2);
-
-        int resultadoResta = miCalc.resta(n1, n2);
-        System.out.println("La resta es: " + resultadoResta);
-
-        float resultadoDivision = miCalc.division(n1, n2);
-        System.out.println("La division es: " + resultadoDivision);
-
-        float resultadoProducto = miCalc.producto(n1, n2);
-        System.out.println("La multiplicacion es: " + resultadoProducto);
+        menuApp.iniciar();
 
         System.out.println("La informacion obtenida por getA es: " + miCalc.getA());
         System.out.println("La informacion obtenida por getB es: " + miCalc.getB());

@@ -1,51 +1,59 @@
-public class Calculadora{
+public class Calculadora {
 
-    public Calculadora(int a, int b) { // constructor
+    // Atributos privados (Encapsulamiento real)
+    private int A;
+    private int B;
+
+    // Constructor
+    public Calculadora(int a, int b) {
         this.A = a;
         this.B = b;
     }
 
-    int A, B;
-
-    public void setA(int a){
-        this.A = a; // guarda el valor del parametro "a" en el atributo this.A
+    // Setters y Getters
+    public void setA(int a) {
+        this.A = a;
     }
 
-    public void setB(int b){
-        this.B = b; // el constructor se encargar de guardar los datos del set
+    public void setB(int b) {
+        this.B = b;
     }
 
-    public int getA () {
-        return this.A; // Devuelve el valor que tiene guardado el atributo A
+    public int getA() {
+        return this.A;
     }
 
-    public int getB () {
+    public int getB() {
         return this.B;
     }
 
-    public void sumar(int A, int B) {
-        int suma = A + B;
-        System.out.println("La suma es: " + suma);
-    }
-    public void sumar(){ // funciones distintas esta recibe parametros
+    // --- MÉTODOS DE OPERACIÓN OPTIMIZADOS ---
+
+    // Sobrecarga 1: Suma usando atributos internos (vacío, solo imprime)
+    public void sumar() {
         int suma = this.A + this.B;
-        System.out.println("La suma es: " + suma);
-    }
-    public int resta(int A, int B) {
-        int resto = A - B;
-        return resto;
+        System.out.println("La suma (desde atributos internos) es: " + suma);
     }
 
-    public float division(float A, float B) {
-        if (B == 0) {
-            System.out.println("Error no se puede imprimir por cero");
-            return 0; // evitamos que el programa caiga
-        }
-        return A / B;
+    // Sobrecarga 2: Ahora SÍ retorna un entero para que coincida con tu menú
+    public int sumar(int A, int B) {
+        return A + B;
+    }
+
+    public int resta(int A, int B) {
+        return A - B;
     }
 
     public int producto(int A, int B) {
-        int pro = A * B;
-        return pro;
+        return A * B;
+    }
+
+    // División optimizada: maneja decimales y evita que el programa muera si dividen por cero
+    public float division(float A, float B) {
+        if (B == 0) {
+            System.out.println("¡Error matemático: No se puede dividir por cero!");
+            return 0.0f; // Retorna cero seguro
+        }
+        return A / B; // Retorna el valor decimal correcto (ej. 2.5)
     }
 }
