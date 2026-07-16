@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        Calculadora miCalc = new Calculadora();
+        Calculadora miCalc = new Calculadora(); // se usa el operador new para instanciar (crear) un objeto real en la memoria de la computadora llamado miCalc.
 
         System.out.println("Ingrese un número:");
         int n1 = leer.nextInt();
@@ -23,6 +23,5 @@ public class main {
 
         System.out.println("La informacion obtenida por getB es: " + miCalc.getB());
 
-        System.out.println("primer print en jdk 25");
     }
 }

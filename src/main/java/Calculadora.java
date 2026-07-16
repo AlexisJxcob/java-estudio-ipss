@@ -3,7 +3,7 @@ public class Calculadora{
     int A, B;
 
     public void setA(int a){
-        this.A = a;
+        this.A = a; // guarda el valor del parametro "a" en el atributo this.A
     }
 
     public void setB(int b){
@@ -11,7 +11,7 @@ public class Calculadora{
     }
 
     public int getA () {
-        return this.A;
+        return this.A; // Devuelve el valor que tiene guardado el atributo A
     }
 
     public int getB () {
