@@ -22,5 +22,7 @@ public class main {
         System.out.println("La informacion obtenida por getA es: " + miCalc.getA());
 
         System.out.println("La informacion obtenida por getB es: " + miCalc.getB());
+
+        System.out.println("primer print en jdk 25");
     }
 }
